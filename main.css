@@ -1,0 +1,235 @@
+/* line 5, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@-moz-keyframes twinkle {
+  0%, 100% {
+    transform: translate3d(-40px, 0, 0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate3d(-40px, 0, 0);
+    opacity: 0.7;
+  }
+}
+@-webkit-keyframes twinkle {
+  0%, 100% {
+    transform: translate3d(-40px, 0, 0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate3d(-40px, 0, 0);
+    opacity: 0.7;
+  }
+}
+@keyframes twinkle {
+  0%, 100% {
+    transform: translate3d(-40px, 0, 0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate3d(-40px, 0, 0);
+    opacity: 0.7;
+  }
+}
+@-moz-keyframes float-nebula {
+  0%, 100% {
+    background-position-x: right;
+  }
+  50% {
+    background-position-x: left;
+  }
+}
+@-webkit-keyframes float-nebula {
+  0%, 100% {
+    background-position-x: right;
+  }
+  50% {
+    background-position-x: left;
+  }
+}
+@keyframes float-nebula {
+  0%, 100% {
+    background-position-x: right;
+  }
+  50% {
+    background-position-x: left;
+  }
+}
+/* line 6, scss/main.scss */
+body {
+  margin: 0;
+  background: black;
+  color: white;
+}
+
+/* line 11, scss/main.scss */
+.wrapper {
+  min-height: 460px;
+  position: absolute;
+  overflow: hidden;
+  display: table;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 21, scss/main.scss */
+.scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 29, scss/main.scss */
+.layer {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 37, scss/main.scss */
+.background {
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  background-size: cover;
+  background: url(./img/background.jpg) no-repeat 50% 100%;
+}
+/* line 45, scss/main.scss */
+.background::before {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* line 56, scss/main.scss */
+.stars-bg,
+.nebula-bg {
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  top: -5%;
+  right: -5%;
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+/* line 66, scss/main.scss */
+.stars-img {
+  background-image: url("./img/stars.png");
+}
+
+/* line 69, scss/main.scss */
+.stars-img2 {
+  background-image: url("./img/stars2.png");
+}
+
+/* line 75, scss/main.scss */
+.star {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iNjUlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(ellipse cover at center, #ffffff 0%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0) 100%);
+  -moz-animation: twinkle 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-animation: twinkle 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  animation: twinkle 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -moz-box-shadow: 1px 1px 20px 3px #fff9;
+  -webkit-box-shadow: 1px 1px 20px 3px #fff9;
+  box-shadow: 1px 1px 20px 3px #fff9;
+}
+
+/* line 85, scss/main.scss */
+.nebula {
+  background-image: url("./img/nebula-blue.png");
+  opacity: 0.4;
+  background-size: 110% 50%;
+  background-repeat: repeat-x;
+  background-position-y: center;
+  background-position-x: left;
+  -moz-animation: float-nebula 10s infinite linear;
+  -webkit-animation: float-nebula 10s infinite linear;
+  animation: float-nebula 10s infinite linear;
+}

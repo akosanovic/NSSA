@@ -1,0 +1,94 @@
+@import 'compass/reset';
+@import 'compass/css3';
+
+@import 'animation';
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+}
+.wrapper {
+    min-height: 460px;
+    position: absolute;
+    overflow: hidden;
+    display: table;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.scene {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.layer {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+}
+
+.background {
+    position: absolute;
+    bottom: -5%;
+    left  : -5%;
+    top   : -5%;
+    width: 110%;
+    background-size: cover;
+    background: url(./img/background.jpg) no-repeat 50% 100%;
+    &::before {
+        content: '';
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba( 0, 0, 0, 0.3);
+    }
+}
+.stars-bg,
+.nebula-bg {
+    position: absolute;
+    bottom: -5%;
+    left  : -5%;
+    top   : -5%;
+    right: -5%;
+    background-repeat: repeat;
+    background-size: contain;
+}
+.stars-img {
+    background-image: url('./img/stars.png');
+}
+.stars-img2 {
+    background-image: url('./img/stars2.png');
+
+}
+
+// animated random star
+.star {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    @include border-radius(50px);
+    @include background-image(radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3) 65%, rgba(255,255,255,0.0) 100%));
+    @include animation(twinkle 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95));
+    @include box-shadow(1px 1px 20px 3px #fff9)
+}
+.nebula {
+    background-image: url('./img/nebula-blue.png');
+    opacity: 0.4;
+    background-size: 110% 50%;
+    background-repeat: repeat-x;
+    background-position-y: center;
+    background-position-x: left;
+    @include animation(float-nebula 10s infinite linear);
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Testing Parallax.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+
+    <script  src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body>
+   <div class="wrapper">
+        <ul id="scene" class="scene">
+            <!-- all direct child elements of the scene will become moving objects -->
+            <!-- data-depth movement applied to each object will be multiplied by data-depth number -->           
+            <li class="layer" data-depth="0.1"> <div class="background"> </div> </li>
+            <li class="layer" data-depth="0.2">
+                <div class="stars-bg stars-img"></div>
+            </li>
+            <li class="layer" data-depth="0.3">
+                <div class="stars-bg stars-img2"></div>
+            </li>
+            <!-- Nebula -->
+            <li class="layer" data-depth="0.3">
+                <div class="nebula-bg nebula"></div>
+            </li>
+
+
+            <!-- JS Random Stars -->
+            <li class="layer" data-depth="0.4">
+                <div class="stars-bg stars-random"></div>
+            </li>
+        </ul>
+   </div>
+
+</body>
+</html>
