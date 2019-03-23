@@ -60,8 +60,18 @@ body {
     left  : -5%;
     top   : -5%;
     right: -5%;
+
     background-repeat: repeat;
     background-size: contain;
+}
+.nebula {
+    opacity: 0.2;
+    background-image: url('./img/nebula-blue.png');
+    background-size: 110% 60%;
+    background-repeat: repeat-x;
+    background-position-y: center;
+    background-position-x: center;
+    @include animation(float-nebula 50s infinite linear);
 }
 .stars-img {
     background-image: url('./img/stars.png');
@@ -70,6 +80,8 @@ body {
     background-image: url('./img/stars2.png');
 
 }
+
+
 
 // animated random star
 .star {
@@ -82,13 +94,71 @@ body {
     @include animation(twinkle 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95));
     @include box-shadow(1px 1px 20px 3px #fff9)
 }
-.nebula {
-    background-image: url('./img/nebula-blue.png');
-    opacity: 0.15;
-    background-size: 110% 60%;
-    background-repeat: repeat-x;
-    background-position-y: center;
-    background-position-x: center;
-    @include animation(float-nebula 50s infinite linear);
+
+
+
+
+.constellations {
+    z-index: 2;
+    .constellation {
+        position: absolute;
+        display: inline-block;
+
+        &:hover {
+            .nav-title {
+                display: block;
+            } 
+            .constellation-img {
+                opacity: 0.7;
+                @include transform(scale(1));
+                @include transition(all 0.5s ease);
+            }
+        }
+        // .constellation-img
+        .constellation-img {
+            opacity: 0.5;
+            @include transform(scale(0.5));
+            @include transition(all 0.5s ease);
+            max-width: 300px;
+        }
+    }
+
+    .nav-title {
+        display: none;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
 }
 
+
+
+// Absolut positioning 
+.y-top {
+    top: 0;
+}
+.y-center {
+    top: 50%; 
+    @include transform(translateY(-50%));
+}
+.y-bottom {
+    bottom: 0;
+}
+.x-left {
+    left: 0;
+}
+.x-center {
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+.x-right {
+    right: 0;
+}
+.x-center.y-center {
+    @include transform(translate(-50%, -50%));
+}

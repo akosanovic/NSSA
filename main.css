@@ -189,17 +189,30 @@ body {
   background-size: contain;
 }
 
-/* line 66, scss/main.scss */
+/* line 67, scss/main.scss */
+.nebula {
+  opacity: 0.2;
+  background-image: url("./img/nebula-blue.png");
+  background-size: 110% 60%;
+  background-repeat: repeat-x;
+  background-position-y: center;
+  background-position-x: center;
+  -moz-animation: float-nebula 50s infinite linear;
+  -webkit-animation: float-nebula 50s infinite linear;
+  animation: float-nebula 50s infinite linear;
+}
+
+/* line 76, scss/main.scss */
 .stars-img {
   background-image: url("./img/stars.png");
 }
 
-/* line 69, scss/main.scss */
+/* line 79, scss/main.scss */
 .stars-img2 {
   background-image: url("./img/stars2.png");
 }
 
-/* line 75, scss/main.scss */
+/* line 87, scss/main.scss */
 .star {
   position: absolute;
   display: block;
@@ -221,15 +234,101 @@ body {
   box-shadow: 1px 1px 20px 3px #fff9;
 }
 
-/* line 85, scss/main.scss */
-.nebula {
-  background-image: url("./img/nebula-blue.png");
-  opacity: 0.15;
-  background-size: 110% 60%;
-  background-repeat: repeat-x;
-  background-position-y: center;
-  background-position-x: center;
-  -moz-animation: float-nebula 50s infinite linear;
-  -webkit-animation: float-nebula 50s infinite linear;
-  animation: float-nebula 50s infinite linear;
+/* line 101, scss/main.scss */
+.constellations {
+  z-index: 2;
+}
+/* line 103, scss/main.scss */
+.constellations .constellation {
+  position: absolute;
+  display: inline-block;
+}
+/* line 108, scss/main.scss */
+.constellations .constellation:hover .nav-title {
+  display: block;
+}
+/* line 111, scss/main.scss */
+.constellations .constellation:hover .constellation-img {
+  opacity: 0.7;
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 118, scss/main.scss */
+.constellations .constellation .constellation-img {
+  opacity: 0.5;
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  max-width: 300px;
+}
+/* line 126, scss/main.scss */
+.constellations .nav-title {
+  display: none;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+/* line 142, scss/main.scss */
+.y-top {
+  top: 0;
+}
+
+/* line 145, scss/main.scss */
+.y-center {
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 149, scss/main.scss */
+.y-bottom {
+  bottom: 0;
+}
+
+/* line 152, scss/main.scss */
+.x-left {
+  left: 0;
+}
+
+/* line 155, scss/main.scss */
+.x-center {
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 159, scss/main.scss */
+.x-right {
+  right: 0;
+}
+
+/* line 162, scss/main.scss */
+.x-center.y-center {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }

@@ -14,24 +14,80 @@
 </head>
 <body>
    <div class="wrapper">
-        <ul id="scene" class="scene">
-            <!-- all direct child elements of the scene will become moving objects -->
-            <!-- data-depth movement applied to each object will be multiplied by data-depth number -->           
-            <li class="layer" data-depth="0.1"> <div class="background"> </div> </li>
-            <li class="layer" data-depth="0.2">
-                <div class="stars-bg stars-img"></div>
+        <ul id="scene" class="scene" data-pointer-events="true" data-scalar-x="25" data-scalar-y="25">
+            <!-- Background -->
+            <li class="layer" data-depth="0.1" data-pointer-events="false"> 
+                <div class="background"> </div>
             </li>
-            <li class="layer" data-depth="0.3">
-                <div class="stars-bg stars-img2"></div>
-            </li>
-            <!-- Nebula -->
-            <li class="layer" data-depth="0.1">
+
+             <!-- Nebula -->
+             <li class="layer" data-depth="0.1" data-pointer-events="false">
                 <div class="nebula-bg nebula"></div>
             </li>
+            
+            <!-- Background Stars  -->
+            <li class="layer" data-depth="0.3" data-pointer-events="false">
+                <div class="stars-bg stars-img"></div>
+            </li>
+            <li class="layer" data-depth="0.4" data-pointer-events="false">
+                <div class="stars-bg stars-img2"></div>
+            </li>
+           
+
+            <!-- constellations -->
+            <li class="constellations layer" data-depth="0.6">
+                <!-- Left Row -->
+                <a class="constellation y-top x-left" href="#">
+                    <img class="constellation-img" src="img/constellation/sagittarius.jpeg" alt="">
+                    <h3 class="nav-title"> O Nama </h3>
+                </a>
+                <a class="constellation  y-center x-left" href="#">
+                    <img class="constellation-img" src="img/constellation/orion.jpeg" alt="">
+                    <h3 class="nav-title"> Letopisi </h3>
+                </a>
+                <a class="constellation y-bottom x-left" href="#">
+                    <img class="constellation-img" src="img/constellation/ursa-major.jpg" alt="">
+                    <h3 class="nav-title"> Meterologija </h3>
+                </a>
+
+                <!-- Center Row -->
+                <a class="constellation y-top x-center" href="#">
+                    <img class="constellation-img" src="img/constellation/ursa-minor.jpg" alt="">
+                    <h3 class="nav-title"> Kalendar </h3>
+                </a>
+                <a class="constellation y-center x-center" href="#">
+                    <img class="constellation-img" src="img/constellation/scorpio.jpg" alt="">
+                    <h3 class="nav-title"> Astrofizika </h3>
+                </a>
+                <a class="constellation y-bottom x-center" href="#">
+                    <img class="constellation-img" src="img/constellation/leo.jpg" alt="">
+                    <h3 class="nav-title"> Zasto b a ne p </h3>
+                </a>
+
+                <!-- Right Row -->
+                <a class="constellation y-top x-right" href="#">
+                    <img class="constellation-img" src="img/constellation/andromeda.jpg" alt="">
+                    <h3 class="nav-title"> Futurologija </h3>
+                </a>
+                <a class="constellation y-center x-right" href="#">
+                    <img class="constellation-img" src="img/constellation/aquarius.jpg" alt="">
+                    <h3 class="nav-title"> Biblioteka </h3>
+                </a>
+                <a class="constellation y-bottom x-right" href="#">
+                    <img class="constellation-img" src="img/constellation/leo.jpg" alt="">
+                    <h3 class="nav-title"> Zasto b a ne p </h3>
+                </a>                
+            </li>
+
+            <!-- lights -->
+            <li class="layer" data-depth="0.6">
+
+            </li>
+            
 
 
             <!-- JS Random Stars -->
-            <li class="layer" data-depth="0.4">
+            <li class="layer" data-depth="0.6" data-pointer-events="false">
                 <div class="stars-bg stars-random"></div>
             </li>
         </ul>
