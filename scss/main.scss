@@ -84,11 +84,11 @@ body {
 }
 .nebula {
     background-image: url('./img/nebula-blue.png');
-    opacity: 0.4;
-    background-size: 110% 50%;
+    opacity: 0.15;
+    background-size: 110% 60%;
     background-repeat: repeat-x;
     background-position-y: center;
-    background-position-x: left;
-    @include animation(float-nebula 10s infinite linear);
+    background-position-x: center;
+    @include animation(float-nebula 50s infinite linear);
 }
 

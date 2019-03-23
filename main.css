@@ -94,27 +94,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @-moz-keyframes float-nebula {
-  0%, 100% {
-    background-position-x: right;
+  0% {
+    background-position-x: -100vw;
   }
-  50% {
-    background-position-x: left;
+  100% {
+    background-position-x: 100vw;
   }
 }
 @-webkit-keyframes float-nebula {
-  0%, 100% {
-    background-position-x: right;
+  0% {
+    background-position-x: -100vw;
   }
-  50% {
-    background-position-x: left;
+  100% {
+    background-position-x: 100vw;
   }
 }
 @keyframes float-nebula {
-  0%, 100% {
-    background-position-x: right;
+  0% {
+    background-position-x: -100vw;
   }
-  50% {
-    background-position-x: left;
+  100% {
+    background-position-x: 100vw;
   }
 }
 /* line 6, scss/main.scss */
@@ -224,12 +224,12 @@ body {
 /* line 85, scss/main.scss */
 .nebula {
   background-image: url("./img/nebula-blue.png");
-  opacity: 0.4;
-  background-size: 110% 50%;
+  opacity: 0.15;
+  background-size: 110% 60%;
   background-repeat: repeat-x;
   background-position-y: center;
-  background-position-x: left;
-  -moz-animation: float-nebula 10s infinite linear;
-  -webkit-animation: float-nebula 10s infinite linear;
-  animation: float-nebula 10s infinite linear;
+  background-position-x: center;
+  -moz-animation: float-nebula 50s infinite linear;
+  -webkit-animation: float-nebula 50s infinite linear;
+  animation: float-nebula 50s infinite linear;
 }

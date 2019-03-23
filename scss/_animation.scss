@@ -11,10 +11,13 @@
     }
 }
 @include keyframes(float-nebula) {
-    0%, 100% {
-        background-position-x: right;
+    0% {
+        background-position-x: -100vw
+        // transform: translateX(-100%);
     }
-    50% {
-        background-position-x: left;
+    100% {
+        background-position-x: 100vw;
+        // transform: translateX(100%);
+
     }
 }
