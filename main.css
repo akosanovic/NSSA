@@ -271,8 +271,10 @@ body {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   max-width: 300px;
+  width: 100%;
+  height: auto;
 }
-/* line 126, scss/main.scss */
+/* line 128, scss/main.scss */
 .constellations .nav-title {
   display: none;
   position: absolute;
@@ -287,12 +289,12 @@ body {
   font-size: 20px;
 }
 
-/* line 142, scss/main.scss */
+/* line 144, scss/main.scss */
 .y-top {
-  top: 0;
+  top: 10%;
 }
 
-/* line 145, scss/main.scss */
+/* line 147, scss/main.scss */
 .y-center {
   top: 50%;
   -moz-transform: translateY(-50%);
@@ -301,17 +303,17 @@ body {
   transform: translateY(-50%);
 }
 
-/* line 149, scss/main.scss */
+/* line 151, scss/main.scss */
 .y-bottom {
-  bottom: 0;
+  bottom: 10%;
 }
 
-/* line 152, scss/main.scss */
+/* line 154, scss/main.scss */
 .x-left {
-  left: 0;
+  left: 5%;
 }
 
-/* line 155, scss/main.scss */
+/* line 157, scss/main.scss */
 .x-center {
   left: 50%;
   -moz-transform: translateX(-50%);
@@ -320,12 +322,12 @@ body {
   transform: translateX(-50%);
 }
 
-/* line 159, scss/main.scss */
+/* line 161, scss/main.scss */
 .x-right {
-  right: 0;
+  right: 5%;
 }
 
-/* line 162, scss/main.scss */
+/* line 164, scss/main.scss */
 .x-center.y-center {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

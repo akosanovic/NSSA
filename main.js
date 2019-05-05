@@ -2,8 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function(){ 
     var sky = $('.stars-random');
-    console.log("ayooo", sky)
-
     windowW = $(window).width();
     windowH = $(window).height();
 
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
 
-    starMaker(50);
+    // starMaker(50);
 
     // Start Parallax
     var scene = document.getElementById('scene');
